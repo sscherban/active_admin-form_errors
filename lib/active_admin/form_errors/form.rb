@@ -25,7 +25,7 @@ module ActiveAdmin
         if form_errors_config.respond_to?(:call)
           instance_exec(&form_errors_config)
         else
-          resource.errors.keys
+          resource.errors.attribute_names
         end
       end
 
